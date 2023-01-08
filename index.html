@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#005DA9',
+                    }
+                },
+
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '1rem',
+                        sm: '2rem',
+                        lg: '4rem',
+                        xl: '5rem',
+                        '2xl': '6rem',
+                    },
+                },
+
+
+
+
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <title>«Наурыз Мед»</title>
+    <meta name="description" content="Оздоровление и качество – наш приоритет">
+
+
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        main {
+            flex: 1 0 auto;
+        }
+
+
+        .bg-home {
+            background-image: url(img/bg.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+
+        .bg-home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0 0 0 / 51%)
+        }
+
+
+        #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+
+    <style>
+        .scrolling-active {
+            background-position-y: -100px;
+
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+
+    <div id="myBtn"
+        class="hidden bg-primary p-5 bg-white rounded-full text-primary text-center w-[60px] h-[60px] fixed lg:bottom-10 bottom-10 z-50 outline outline-4 right-5  lg:right-10">
+
+        <svg class="animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5" />
+        </svg>
+
+    </div>
+
+    <main>
+
+        <nav id="navbar"
+            class="lg:px-0 px-5 lg:block lg:py-5 py-2 flex items-center lg:justify-between text-white fixed w-full border-b border-white border-opacity-20 z-50">
+            <div class="container mx-auto">
+                <div class="flex w-full">
+
+
+                    <ul id="mobile-menu-active"
+                        class="lg:visible invisible lg:w-1/2 flex justify-start flex lg:bg-transparent lg:flex-row flex-col bg-primary bg-opacity-90 w-full lg:static left-0 top-[80px] absolute lg:p-0 p-5 ">
+                        <li class="lg:mr-6 lg:py-0 lg:border-none border-b border-white border-opacity-20 py-5"><a
+                                href="#home">Главная</a></li>
+                        <li class="lg:mr-6 lg:py-0 lg:border-none border-b border-white border-opacity-20 py-5"><a
+                                href="#about">О нас</a></li>
+                        <li class="lg:mr-6 lg:py-0 py-5"><a href="#contacts">Контакты</a></li>
+                    </ul>
+
+                    <div class="w-1/2 flex justify-start lg:justify-end">
+
+                        <a href="tel:+7(707)333-54-68" class="text-white text-sm">8 707 333-54-68</a>
+                    </div>
+                </div>
+            </div>
+
+            <button id="openMenu" class="w-[70px] h-full p-5 relative top-0 lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+
+
+        </nav>
+
+
+        <section id="home" class="flex overflow-hidden flex-col">
+            <div class="bg-home w-full h-[700px] items-center justify-center flex ">
+                <div class="container mx-auto">
+                    <div
+                        class=" relative z-40  py-20 items-start lg:p-0 p-5 lg:mt-0 mt-10 lg:items-center lg:justify-center justify-start flex lg:flex-row flex-col">
+
+                        <div class="lg:w-full text-white flex flex-col items-start  justify-center h-full">
+                            <h1 class="lg:text-3xl text-2xl font-bold mb-10 uppercase">ТОО «Наурыз Мед» </h1>
+                            <ul class="list-disc ml-4">
+                                <li>Официальный дистрибьютор компании Mölnlycke Health Care (Швеция).</li>
+                                <li>Запатентованная технология силиконового покрытия «Safetac».</li>
+                                <li>Гипоаллергенный состав.</li>
+                                <li>Прямые поставки с Европы.</li>
+                                <li>Бесплатная доставка по Казахстану.</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="py-20 lg:px-0 px-5" id="about">
+            <div class="container mx-auto">
+
+                <div class="w-full">
+                    <h2 class="lg:text-4xl text-2xl font-bold mb-3 font-bold mb-3 text-primary">О компании</h2>
+                    <p class="text-2x1">
+                        <b>ТОО «Наурыз Мед»</b> зарегистрировано как самостоятельное юридическое лицо Республики Казахстан в
+                        2013 году. Компания занимается оптовыми поставками лекарственных средств, медицинского
+                        оборудования и изделий медицинского назначения для аптечных и медицинских организаций.
+                        В 2017 году компанией был приобретён склад площадью 450 квадратных метров, в соответствии
+                        требованиям стандарта GDP, санитарными нормами и другими требованиями законодательства
+                        Республики Казахстан.</br></br>
+
+                        <b>ТОО «Наурыз Мед»</b> непрерывно расширяет связи с зарубежными фирмами-производителями из Европы и
+                        Азии для поставки высококачественного товара на территорию Республики Казахстан, благодаря чему
+                        мы можем предложить широкий ассортимент лекарственных средств, медицинского оборудования и
+                        медицинских изделий от ведущих производителей.
+                        Мы ценим своих клиентов и поэтому стремимся предоставить им наилучший сервис и качество. Мы
+                        работаем быстро и эффективно, чтобы наши клиенты могли смело рассчитывать на нас в своей работе.
+                        Если у Вас есть какие-либо вопросы или потребности, пожалуйста, не стесняйтесь связаться с нами,
+                        мы с удовольствием поможем Вам.
+
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+        <section class="container mx-auto lg:px-0 px-5 py-20 ">
+
+            <div class="flex w-full justify-between">
+
+            </div>
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <img class="swiper-slide" src="img/parts/1.png" alt="">
+                    <img class="swiper-slide" src="img/parts/2.png" alt="">
+                    <img class="swiper-slide" src="img/parts/3.png" alt="">
+                    <img class="swiper-slide" src="img/parts/4.png" alt="">
+                    <img class="swiper-slide" src="img/parts/5.png" alt="">
+
+
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section id="contacts">
+
+            <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+            <div id="map" style="width: 100%; height: 400px"></div>
+
+            <script type="text/javascript">
+                ymaps.ready(init);
+
+                function init() {
+                    var myMap = new ymaps.Map("map", {
+                        center: [51.128, 71.430],
+                        zoom: 16
+                    });
+
+                    var myPlacemark = new ymaps.Placemark([51.128, 71.430], {
+                        hintContent: 'ТОО «Наурыз Мед»',
+                        balloonContent: 'г. Астана, ул. Толе-би 40, ПН-6.'
+                    });
+
+                    myMap.geoObjects.add(myPlacemark);
+                }
+
+            </script>
+
+
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+
+    <footer class="bg-primary py-5 text-white p-5">
+        <div class="container mx-auto">
+            <div class="flex lg:flex-row flex-col text-sm">
+                <div class="lg:w-1/2 w-full flex lg:flex-row flex-col">
+                    <div>
+                        <span class="mr-5"><b>Почта</b>: nauryzmed@mail.ru</span>
+                    </div>
+                    <div class="div">
+                        <span class="font-bold">Телефон:</span>
+                        <a href="tel:+7(707)333-54-68" class="text-white">8 707 333-54-68</a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full flex lg:justify-end">
+                    <b class="lg:mr-5">Адрес:</b>г. Астана, ул. Толе-би 40, ПН-6.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.mySwiper', {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-nexts',
+                prevEl: '.swiper-button-prevs',
+            },
+
+
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                },
+            }
+        });
+
+
+
+
+        const element = document.querySelector('.bg-home');
+
+        function parallax() {
+            const scrollY = window.scrollY;
+            element.style.transform = `translateY(${scrollY * 0.5}px)`;
+        }
+
+        window.addEventListener('scroll', parallax);
+
+
+
+
+        //от сюда и подключить сюда js файл
+
+        // добавляем navbar в переменную
+        const navbar = document.getElementById('navbar');
+
+        // добавляем кнопку в переменную
+        const btn = document.getElementById('myBtn');
+
+
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        // по умолчанию кнопка вверх скрыта
+        btn.style.display = "none";
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+
+        // после нажатия на кнопку, скролл вверх
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+
+        btn.addEventListener("click", topFunction);
+
+        // добавляем цвет фона для navbar при скролле страницы вниз 
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                navbar.classList.add('bg-primary', 'bg-opacity-80');
+
+            } else {
+
+                navbar.classList.remove('bg-primary', 'bg-opacity-80');
+            }
+        });
+
+
+        // делаем плавный скролл при клике на ссылку в navbar
+        const links = document.querySelectorAll('#navbar a');
+
+        for (const link of links) {
+            link.addEventListener('click', clickHandler);
+        }
+
+        function clickHandler(e) {
+            e.preventDefault();
+
+            const href = this.getAttribute('href');
+            const offsetTop = document.querySelector(href).offsetTop;
+
+            scroll({
+                top: offsetTop,
+                behavior: "smooth"
+            });
+        }
+
+
+
+
+
+        // добавляем кнопку в переменную
+        const Mobilemenu = document.getElementById('mobile-menu-active');
+
+        // открытие меню
+        function openMenu() {
+            Mobilemenu.classList.remove('invisible');
+        }
+
+        // закрытие меню
+        function closeMenu() {
+            Mobilemenu.classList.add('invisible');
+        }
+
+
+        // если нажали вне меню, то закрываем его
+        document.addEventListener('click', function (e) {
+            if (e.target.closest('#mobile-menu-active') || e.target.closest('#openMenu')) return;
+            closeMenu();
+        });
+
+
+
+
+        document.getElementById('openMenu').addEventListener('click', function () {
+            if (Mobilemenu.classList.contains('invisible')) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        });
+
+        // закрытие меню при клике на ссылку
+        document.querySelectorAll('#mobile-menu-active a').forEach(function (link) {
+            link.addEventListener('click', closeMenu);
+        });
+
+
+
+
+
+
+
+
+
+
+// до сюда
+
+
+    </script>
+
+
+
+</body>
+
+</html>
